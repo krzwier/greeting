@@ -10,4 +10,9 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
+
+	public static String greet(String name) {
+		return "Hello, " + name + ".";
+	}
+
 }

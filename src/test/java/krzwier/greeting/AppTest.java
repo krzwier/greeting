@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
- * Unit test for simple App.
+ * Unit tests for App.
  */
 public class AppTest 
 {
@@ -12,8 +12,10 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void testGreetingBob()
     {
-        assertTrue( true );
+        String bob = "Bob";
+        assertEquals("Hello, Bob.", App.greet(bob));
+    
     }
 }
