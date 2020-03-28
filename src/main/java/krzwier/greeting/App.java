@@ -12,7 +12,12 @@ public class App
     }
 
 	public static String greet(String name) {
-		return "Hello, " + name + ".";
+        if (name == null) {
+            return "Hello, my friend.";
+        } else {
+            return "Hello, " + name + ".";
+        }
+		
 	}
 
 }
