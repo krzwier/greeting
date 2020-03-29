@@ -28,4 +28,14 @@ public class AppTest
         String nullString = null;
         assertEquals("Hello, my friend.", App.greet(nullString));
     }
+
+    /**
+     * Test for requirement #3
+     * Method greet(name) must handle shouting.
+     */
+    @Test
+    public void testGreetingShout(){
+        String shout = "JERRY";
+        assertEquals("HELLO JERRY!", App.greet(shout));
+    }
 }
