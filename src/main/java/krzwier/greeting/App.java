@@ -6,11 +6,6 @@ package krzwier.greeting;
  */
 public class App 
 {
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-
 	public static String greet(String name) {
         if (name == null) {
             return "Hello, my friend.";
@@ -20,6 +15,10 @@ public class App
             return "Hello, " + name + ".";
         }
 		
+	}
+
+	public static String greet(String[] arr) {
+		return "Hello, " + arr[0] + " and " + arr[1] + ".";
 	}
 
 }

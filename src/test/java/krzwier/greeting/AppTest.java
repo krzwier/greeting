@@ -38,4 +38,14 @@ public class AppTest
         String shout = "JERRY";
         assertEquals("HELLO JERRY!", App.greet(shout));
     }
+
+    /**
+     * Test for requirement #4
+     * Method greet(name) must also accept an array of two names
+     */
+    @Test
+    public void testGreetingArrayTwo(){
+        String[] arr = {"Jill", "Jane"};
+        assertEquals("Hello, Jill and Jane.",App.greet(arr));
+    }
 }
