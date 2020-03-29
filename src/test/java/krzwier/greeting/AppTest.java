@@ -48,4 +48,14 @@ public class AppTest
         String[] arr = {"Jill", "Jane"};
         assertEquals("Hello, Jill and Jane.",App.greet(arr));
     }
+
+    /**
+     * Test for requirement #5
+     * Method greet(name) must handle an array of arbitrary length
+     */
+    @Test
+    public void testGreetingArrayArbitrary() {
+        String[] arr = {"Bob", "Charlie", "Dianne"};
+        assertEquals("Hello, Bob, Charlie, and Dianne.", App.greet(arr));
+    }
 }

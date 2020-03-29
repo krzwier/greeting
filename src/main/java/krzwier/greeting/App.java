@@ -18,7 +18,12 @@ public class App
 	}
 
 	public static String greet(String[] arr) {
-		return "Hello, " + arr[0] + " and " + arr[1] + ".";
+        String output = "Hello, ";
+        for (int i = 0; i < arr.length - 1; i++){
+            output = output + arr[i] + ", ";
+        }
+        output = output + "and " + arr[arr.length - 1] + ".";
+		return output;
 	}
 
 }
