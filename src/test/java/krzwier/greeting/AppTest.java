@@ -68,4 +68,14 @@ public class AppTest
         String[] arr = {"Amy", "BRIAN", "Charlotte"};
         assertEquals("Hello, Amy and Charlotte. AND HELLO BRIAN!", App.greet(arr));
     }
+
+    /**
+     * Test for requirement #7
+     * Method greet(name) must handle entries containing commas
+     */
+    @Test
+    public void testGreetingComma() {
+        String[] arr = {"Bob", "Charlie, Dianne"};
+        assertEquals("Hello, Bob, Charlie, and Dianne.", App.greet(arr));
+    }
 }

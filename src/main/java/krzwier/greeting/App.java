@@ -27,6 +27,11 @@ public class App
             if (arr[i].equals(arr[i].toUpperCase())) {
                 upperCaseName = arr[i];
                 flag = true;
+            } else if (arr[i].indexOf(',') >= 0) {
+                String[] temp = arr[i].split(",\\s*");
+                for (int j = 0; j < temp.length; j++) {
+                    lowerCaseNames.add(temp[j]);
+                }
             } else {
                 lowerCaseNames.add(arr[i]);
             }
