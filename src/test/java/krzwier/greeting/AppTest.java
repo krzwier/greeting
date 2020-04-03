@@ -78,4 +78,15 @@ public class AppTest
         String[] arr = {"Bob", "Charlie, Dianne"};
         assertEquals("Hello, Bob, Charlie, and Dianne.", App.greet(arr));
     }
+
+     /**
+     * Test for requirement #8
+     * Method greet(name)
+     */
+    @Test
+    public void testGreetingEscapeQuotes() {
+        String[] arr = {"Bob", "\"Charlie, Dianne\""};
+        assertEquals("Hello, Bob and Charlie, Dianne.", App.greet(arr));
+    }
+
 }
