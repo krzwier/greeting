@@ -58,4 +58,14 @@ public class AppTest
         String[] arr = {"Bob", "Charlie", "Dianne"};
         assertEquals("Hello, Bob, Charlie, and Dianne.", App.greet(arr));
     }
+
+    /**
+     * Test for requirement #6
+     * Method greet(name) must handle mixing of normal and shouted names
+     */
+    @Test
+    public void testGreetingMixed() {
+        String[] arr = {"Amy", "BRIAN", "Charlotte"};
+        assertEquals("Hello, Amy and Charlotte. AND HELLO BRIAN!", App.greet(arr));
+    }
 }

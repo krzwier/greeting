@@ -1,5 +1,7 @@
 package krzwier.greeting;
 
+import java.util.ArrayList;
+
 /**
  * Hello world!
  *
@@ -18,11 +20,33 @@ public class App
 	}
 
 	public static String greet(String[] arr) {
-        String output = "Hello, ";
-        for (int i = 0; i < arr.length - 1; i++){
-            output = output + arr[i] + ", ";
+        ArrayList<String> lowerCaseNames = new ArrayList<>();
+        boolean flag = false;
+        String upperCaseName = "";
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(arr[i].toUpperCase())) {
+                upperCaseName = arr[i];
+                flag = true;
+            } else {
+                lowerCaseNames.add(arr[i]);
+            }
         }
-        output = output + "and " + arr[arr.length - 1] + ".";
+        String output = "Hello, ";
+        if (lowerCaseNames.size() == 1) {
+            output = greet(lowerCaseNames.get(0));
+        } else {
+            if (lowerCaseNames.size() == 2) {
+                output = output + lowerCaseNames.get(0) + " ";
+            } else {
+                for (int i = 0; i < lowerCaseNames.size() - 1; i++){
+                    output = output + lowerCaseNames.get(i) + ", ";
+                }
+            }
+            output = output + "and " + lowerCaseNames.get(lowerCaseNames.size() - 1) + ".";
+        }
+        if (flag) {
+            output = output + " AND " + greet(upperCaseName);
+        }
 		return output;
 	}
 
