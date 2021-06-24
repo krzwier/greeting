@@ -1,6 +1,8 @@
-package krzwier.greeting;
+package com.github.krzwier;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -57,4 +59,25 @@ public class App
 		return output;
 	}
 
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("> ");
+        String rawInput = in.nextLine();
+        while (!rawInput.equals("exit")) {
+            if (rawInput.equals("")) {
+                String nullString = null;
+                System.out.println(greet(nullString));
+            } else if (rawInput.contains(" ")) {
+                String[] stringArray = rawInput.split(" ");
+                System.out.println(greet(stringArray));
+            } else {
+                System.out.println(greet(rawInput));
+            }
+            System.out.print("> ");
+            rawInput = in.nextLine();
+        }
+        in.close();
+    }
+
+    
 }
